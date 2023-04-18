@@ -1,15 +1,19 @@
-/efs         		 ext4     /dev/block/platform/13500000.dwmmc0/by-name/EFS          flags=backup=1;display="EFS"
-/boot        		 emmc     /dev/block/platform/13500000.dwmmc0/by-name/BOOT         
-/recovery      		 emmc     /dev/block/platform/13500000.dwmmc0/by-name/RECOVERY     flags=backup=1;display="recovery"
-/cache          	 ext4     /dev/block/platform/13500000.dwmmc0/by-name/CACHE        
-/system         	 ext4     /dev/block/platform/13500000.dwmmc0/by-name/SYSTEM       
-/data           	 ext4     /dev/block/platform/13500000.dwmmc0/by-name/USERDATA     length=-16384
-/cpefs          	 ext4     /dev/block/platform/13500000.dwmmc0/by-name/CPEFS        
-/misc           	 emmc     /dev/block/platform/13500000.dwmmc0/by-name/MISC         flags=display="misc"
-/radio          	 emmc     /dev/block/platform/13500000.dwmmc0/by-name/RADIO        flags=backup=1;display="Baseband"
-/system_image         	 emmc     /dev/block/platform/13500000.dwmmc0/by-name/SYSTEM       
-/vendor_image         	 emmc     /dev/block/platform/13500000.dwmmc0/by-name/VENDOR       
-/vendor         	 ext4     /dev/block/platform/13500000.dwmmc0/by-name/VENDOR       flags=backup=1;display="Vendor"
-/odm            	 ext4     /dev/block/platform/13500000.dwmmc0/by-name/ODM          flags=backup=0;display="ODM";wipeingui
-/external_sdcard 	 vfat     /dev/block/mmcblk1p1      /dev/block/mmcblk1   	   flags=display="Micro SDcard";storage;wipeingui;removable
-/usb-otg		 vfat	  /dev/block/sda1 	    /dev/block/sda		   flags=display="USB-OTG";storage;wipeingui;removable
+/efs          ext4     /dev/block/platform/13500000.dwmmc0/by-name/EFS          flags=display="efs"
+/boot         emmc     /dev/block/platform/13500000.dwmmc0/by-name/BOOT         flags=display="boot"
+/recovery     emmc     /dev/block/platform/13500000.dwmmc0/by-name/RECOVERY     flags=display="recovery"
+/cache        ext4     /dev/block/platform/13500000.dwmmc0/by-name/CACHE        flags=display="cache"
+/system       ext4     /dev/block/platform/13500000.dwmmc0/by-name/SYSTEM       flags=display="system"
+/data         ext4     /dev/block/platform/13500000.dwmmc0/by-name/USERDATA     flags=display="data"
+/cpefs        ext4     /dev/block/platform/13500000.dwmmc0/by-name/CPEFS        flags=display="cpefs"
+/modem        emmc     /dev/block/platform/13500000.dwmmc0/by-name/RADIO        flags=display="modem"
+/param        emmc     /dev/block/platform/13500000.dwmmc0/by-name/PARAM        flags=display="param"
+/cp_debug     emmc     /dev/block/platform/13500000.dwmmc0/by-name/CP_DEBUG     flags=display="cp_debug"
+/misc         emmc     /dev/block/platform/13500000.dwmmc0/by-name/MISC         flags=display="misc"
+/vendor       ext4     /dev/block/platform/13500000.dwmmc0/by-name/VENDOR       flags=display="vendor"
+/odm          ext4     /dev/block/platform/13500000.dwmmc0/by-name/ODM          flags=display="odm"
+/preload      ext4     /dev/block/platform/13500000.dwmmc0/by-name/HIDDEN       flags=display="preload"
+
+
+#removable
+/external_sd 	 auto     /dev/block/mmcblk1p1      /dev/block/mmcblk1   	   flags=display="Micro SDcard";storage;wipeingui;removable
+/usb-otg	 auto	  /dev/block/sda1 	    /dev/block/sda		   flags=display="USB-OTG";storage;wipeingui;removable
