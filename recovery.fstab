@@ -1,21 +1,21 @@
 #Android fstab file.
 
 #mount point  	fstype 		device                                                  flags
-/efs          	ext4     /dev/block/platform/13500000.dwmmc0/by-name/EFS          flags=display="efs"
+/efs          	ext4     /dev/block/platform/13500000.dwmmc0/by-name/EFS          flags=backup=1;display="efs"
 /boot         	emmc     /dev/block/platform/13500000.dwmmc0/by-name/BOOT         flags=display="boot"
 /recovery     	emmc     /dev/block/platform/13500000.dwmmc0/by-name/RECOVERY     flags=display="recovery"
 /cache        	ext4     /dev/block/platform/13500000.dwmmc0/by-name/CACHE        flags=display="cache"
-/system       	ext4     /dev/block/platform/13500000.dwmmc0/by-name/SYSTEM       flags=display="system"
+/system       	ext4     /dev/block/platform/13500000.dwmmc0/by-name/SYSTEM       flags=backup=0;display="system"
 /data         	ext4     /dev/block/platform/13500000.dwmmc0/by-name/USERDATA     flags=display="data"
-/modem        	emmc     /dev/block/platform/13500000.dwmmc0/by-name/RADIO        flags=display="modem"
+/modem        	emmc     /dev/block/platform/13500000.dwmmc0/by-name/RADIO        flags=backup=1;display="modem"
 /misc         	emmc     /dev/block/platform/13500000.dwmmc0/by-name/MISC         flags=display="misc"
 /vendor       	ext4     /dev/block/platform/13500000.dwmmc0/by-name/VENDOR       flags=display="vendor"
-/odm          	ext4     /dev/block/platform/13500000.dwmmc0/by-name/ODM          flags=display="odm"
+/odm          	ext4     /dev/block/platform/13500000.dwmmc0/by-name/ODM          flags=backup=0;display="odm"
 /preload      	ext4     /dev/block/platform/13500000.dwmmc0/by-name/HIDDEN       flags=display="preload"
 /system_image	emmc	 /dev/block/platform/13500000.dwmmc0/by-name/SYSTEM	  flags=backup=1
 /vendor_image	emmc	 /dev/block/platform/13500000.dwmmc0/by-name/VENDOR	  flags=backup=1
-/odm_image	emmc	 /dev/block/platform/11120000.ufs/by-name/ODM		  flags=backup=1;flashing;display="ODM Image"
+/odm_image	emmc	 /dev/block/platform/13500000.dwmmc0/by-name/ODM	  flags=backup=1;display="ODM Image"
 
 #removable
-/external_sd 	auto     /dev/block/mmcblk1p1      /dev/block/mmcblk1   	   flags=display="Micro SDcard";storage;wipeingui;removable
-/usb-otg	auto	 /dev/block/sda1 	   /dev/block/sda		   flags=display="USB-OTG";storage;wipeingui;removable
+/external_sd 	auto     /dev/block/mmcblk1p1      /dev/block/mmcblk1   	  flags=display="Micro SDcard";storage;wipeingui;removable
+/usb-otg	auto	 /dev/block/sda1 	   /dev/block/sda		  flags=display="USB-OTG";storage;wipeingui;removable
